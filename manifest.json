@@ -8,7 +8,7 @@
   "theme_color": "#000000",
   "icons": [
     {
-      "src": "./imgs/jbadgegreadient.png",
+      "src": "./imgs/jbadgegreadientsq.png",
       "sizes": "512X512",
       "type": "image/png"
     }
