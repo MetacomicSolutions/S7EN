@@ -250,9 +250,17 @@ font-size: 22px;
 
 </div>
 <div>    
-    <img class="badges"   style="height: 40px; border-radius: 20px;"  src="imgs/yelpp.png" alt="">    
+    <img class="badges"   style="height: 40px; border-radius: 20px;"  src="" alt="">    
 </div>
 
+<button style="
+height: 52px;
+border-radius: 26px;
+border: none;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+background-color: rgba(0, 0, 0, 0.672);
+
+" id="shareButton">Share</button>
 
 <div>    
     <a href="tel:+911">
@@ -278,6 +286,25 @@ z-index: -2;
 position: fixed;
 "></div>
 
+
+<script>
+    document.getElementById('shareButton').addEventListener('click', async () => {
+        if (navigator.share) {
+            try {
+                await navigator.share({
+                    title: document.title,
+                    text: 'Check out this page:',
+                    url: window.location.href,
+                });
+                console.log('Page shared successfully');
+            } catch (error) {
+                console.error('Error sharing:', error);
+            }
+        } else {
+            alert('Web Share API not supported in your browser.');
+        }
+    });
+    </script>
 
     
     <script src="js/jquery-2.2.0.min.js"></script>
