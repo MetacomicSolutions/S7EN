@@ -9,7 +9,7 @@
   "icons": [
     {
       "src": "./imgs/jbadgegreadientsq.png",
-      "sizes": "512X512",
+      "sizes": "1000X1000",
       "type": "image/png"
     }
   ]
